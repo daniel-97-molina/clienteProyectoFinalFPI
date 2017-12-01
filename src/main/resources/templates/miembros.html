@@ -83,22 +83,39 @@
 	<div class="modal fade" id="myModal">
 		<div class="modal-dialog">
 			<div class="modal-content">
-
+	<form class="agregarMiembro">
 				<!-- Modal Header -->
 				<div class="modal-header">
-					<h4 class="modal-title">Modal Heading</h4>
+					<h4 class="modal-title">Nuevo miembro</h4>
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 				</div>
 
 				<!-- Modal body -->
-				<div class="modal-body">Modal body..</div>
+				<div class="modal-body">
+					
+						<input type="text" class="form-control" name="nombre" placeholder="Nombre del nuevo miembro" required="true" /> 
+							<div class="mt-4">
+							<label class="custom-control custom-radio"> 
+							<input id="radio1" name="radio" type="radio" class="custom-control-input" checked="true" value="masc" required="true"/> 
+							<span class="custom-control-indicator"></span> 
+							<span class="custom-control-description">Masculino</span>
+						</label> <label class="custom-control custom-radio"> 
+						<input id="radio2" name="radio" type="radio" class="custom-control-input" value="fem" required="true"/> 
+						<span class="custom-control-indicator"></span> 
+						<span class="custom-control-description">Femenino</span>
+						</label>
+</div>	
+			
+					
+				</div>
 
 				<!-- Modal footer -->
 				<div class="modal-footer">
+				<input type="submit" class="btn btn-primary" value="Agregar"/>
 					<button type="button" class="btn btn-secondary"
 						data-dismiss="modal">Close</button>
 				</div>
-
+</form>
 			</div>
 		</div>
 	</div>
@@ -106,9 +123,7 @@
 
 
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-		crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script
 		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
 		integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
