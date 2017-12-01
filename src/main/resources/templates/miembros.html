@@ -27,7 +27,7 @@
         <li class="d-inline-block w-75">
         <form class="form-inline m-auto" id="frmsucursal">
            <span class="input-group-addon">Sucursal</span>
-          <select class="form-control" id="cmbSucursal" th:selected="">
+          <select class="form-control" id="cmbSucursal">
             <option th:each="sucursal : ${sucursales}" th:value="${sucursal.id}" th:text="${sucursal.ubicacion}"/>
           </select>
         </form>
