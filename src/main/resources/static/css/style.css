@@ -1,0 +1,41 @@
+.bg-gray{
+  background-color: rgb(232, 232, 232);
+}
+.bg-light-blue{
+  background-color: rgb(195, 195, 195);
+}
+#frmsucursal{
+  width: 340px;
+}
+#cmbSucursal{
+  width:250px;
+}
+
+.titulo{
+  width: 140px;
+}
+.main{
+
+  margin: auto;
+  margin-top: 90px;
+  max-width: 1060px;
+  border-radius: 10px;
+}
+.header{
+  position: relative;
+  background-color: rgb(205, 205, 251);
+  padding: 12px 20px;
+  color: rgb(39, 67, 135);
+  border-radius: 10px;
+}
+.header h3{
+  margin: 0;
+}
+#btnNuevoMiembro{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+/*table.table-bordered > * > tr > *{
+  border:1px solid rgb(255, 255, 255)
+}*/

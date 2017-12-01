@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>List Of Employes</title>
+</head>
+<body>
+	<table>
+		<tbody th:each="empleado : ${lista}">
+			<tr>
+				<td th:text="${empleado.codigo}"></td>
+				<td th:text="${empleado.nombre}"></td>
+				<td th:text="${empleado.sucursal_id}"></td>
+				<td th:text="${empleado.contrasena}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

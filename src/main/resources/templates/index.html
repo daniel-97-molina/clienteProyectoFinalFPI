@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+      .container{
+          position: relative;
+          top:50px;
+          height: 500px!important;
+      }
+  </style>
+</head>
+  <body>
+      <div class="container">
+          <div class="text-center w-100 texto"><h1 class="text-center w-75 mx-auto text-info">Este el sistema para la administración de los miembros de <strong class="text-muted">Tío Gym</strong>, para empleados administrativos</h1></div>
+          <div class="form-container"> 
+              <form id='contact_form' class=" w-25 mx-auto mt-4 id" >
+  <div class="form-group">
+    <label for="codigo">Codigo de empleado</label>
+    <input type="text" class="form-control" id="codigo"  placeholder="Ingrese su codigo de empleado" required="true"/>
+    <small id="emailHelp" class="form-text text-muted">El código es unico para cada empleado </small>
+<!--    <div class="invalid-feedback">
+        Por favor ingrese un código de empleado.
+      </div>-->
+  </div>
+  <div class="form-group">
+    <label for="password">Contraseña</label>
+    <input type="password" class="form-control" id="password" name="codigo" placeholder="Ingrese su contraseña" required="true"/>
+<!--    <div class="invalid-feedback">
+        Por favor ingrese una contraseña.
+      </div>-->
+  </div>
+ 
+    <div class="text-center">
+  <button type="submit" class="btn btn-primary w-50">Ingresar</button>
+    </div>
+</form>
+          </div>
+      </div>
+<script src="javascript/index.js">
+
+</script>
+</body>
+</html>
