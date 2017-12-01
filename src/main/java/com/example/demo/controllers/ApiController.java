@@ -22,6 +22,7 @@ public class ApiController {
 		else {
 		model.addAttribute("empleado",rest.getEmpleado(Integer.parseInt(cookie)));
 		model.addAttribute("sucursales",rest.getSucursals());	
+		model.addAttribute("miembros",rest.getMiembros(1));
 		return "miembros";
 		}
 	}
