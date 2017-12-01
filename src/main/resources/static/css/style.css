@@ -31,10 +31,10 @@
 .header h3{
   margin: 0;
 }
-#btnNuevoMiembro{
-  position: absolute;
-  right: 10px;
-  top: 10px;
+
+.floatr{
+	margin-left: 10px;
+	float: right;
 }
 /*table.table-bordered > * > tr > *{
   border:1px solid rgb(255, 255, 255)

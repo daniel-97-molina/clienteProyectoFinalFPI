@@ -9,6 +9,7 @@
 	integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
 	crossorigin="anonymous" />
 <link rel="stylesheet" href="css/style.css" />
+<link href="css/pnotify.custom.min.css" media="all" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -49,12 +50,17 @@
 	<div class="main">
 		<div class="header">
 			<h3 class="d-inline-block">Miembros</h3>
+
+
+
 			<button id="btnNuevoMiembro" type="button" data-toggle="modal"
-				data-target="#myModal" class="btn btn-primary d-inline-block">Nuevo
+				data-target="#myModal" class="btn btn-primary floatr">Nuevo
 				Miembro</button>
+			<button id="btnAgregarPago" class="btn btn-success d-none floatr">Agregar pago</button>
+			<button id="btnInactivar" class="btn btn-secondary d-none floatr">Inactivar</button>
 		</div>
 		<table id="tblMiembros"
-			class="table table-striped table-bordered mt-3">
+			class="table table-striped table-bordered mt-3 table-hover">
 			<thead class="bg-light-blue">
 				<tr>
 					<th>Nombre</th>
@@ -67,7 +73,7 @@
 			</thead>
 			<tbody th:each="miembro : ${miembros}">
 				<tr>
-					<td th:text="${miembro.nombre}"></td>
+					<td th:id="${miembro.getId()}" th:text="${miembro.nombre}"></td>
 					<td th:text="${miembro.masculino}?Masculino:Femenino"></td>
 					<td th:text="${miembro.activo}?Si:No"></td>
 					<td th:text="${miembro.fechaingreso}"></td>
@@ -133,6 +139,7 @@
 		integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
 		crossorigin="anonymous"></script>
 	<script src="javascript/miembros.js"></script>
+	<script type="text/javascript" src="javascript/pnotify.custom.min.js"></script>
 </body>
 
 </html>
