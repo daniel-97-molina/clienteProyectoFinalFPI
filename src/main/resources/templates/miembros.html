@@ -27,7 +27,7 @@
         <li class="d-inline-block w-75">
         <form class="form-inline m-auto" id="frmsucursal">
            <span class="input-group-addon">Sucursal</span>
-          <select class="form-control" id="cmbSucursal">
+          <select class="form-control" id="cmbSucursal" th:selected="">
             <option th:each="sucursal : ${sucursales}" th:value="${sucursal.id}" th:text="${sucursal.ubicacion}"/>
           </select>
         </form>
@@ -35,8 +35,8 @@
       </ul>
     </div>
     <div>
-    <button class="btn btn-outline-success" type="button">Ingresar</button>
-    <button class="btn btn-outline-info ml-2" type="button">Registro</button>
+<!--     <button class="btn btn-outline-success" type="button">Ingresar</button> -->
+    <button class="btn btn-outline-info ml-2" type="button">Cerrar Sesión</button>
     </div>
   </nav>
 
@@ -54,7 +54,7 @@
         <th>Activo</th>
         <th>Fecha Ingreso</th>
         <th>Estado</th>
-        <th>Acciones</th>
+        <th>Ultimo Pago</th>
       </tr>
     </thead>
    <tbody th:each="miembro : ${miembros}">
@@ -63,6 +63,8 @@
 				<td th:text="${miembro.masculino}?Masculino:Femenino"></td>
 				<td th:text="${miembro.activo}?Si:No"></td>
 				<td th:text="${miembro.fechaingreso}"></td>
+				<td th:text="${miembro.estado}"></td>
+				<td th:text="${miembro.ultimoPago}"></td>
 			</tr>
 		</tbody>
   </table>
@@ -71,6 +73,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="javascript/miembros.js"></script>
 </body>
 
 </html>

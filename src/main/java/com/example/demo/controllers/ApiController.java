@@ -1,10 +1,16 @@
 package com.example.demo.controllers;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.demo.models.Miembro;
+import com.example.demo.models.MiembroTabla;
 import com.example.demo.service.RestFulService;
 
 @Controller
@@ -20,9 +26,14 @@ public class ApiController {
 			return "index";
 		}
 		else {
+			List<MiembroTabla> lista=new ArrayList<MiembroTabla>();
+			for(Miembro m:rest.getMiembros(1)) {
+				lista.add(new MiembroTabla("todo",rest.ultimoPago(m.getId()).getFecha(),m.getId(),m.getNombre(),m.isMasculino(),m.isActivo(),
+						m.getSucursal_id(), m.getFechaingreso()));
+			}
 		model.addAttribute("empleado",rest.getEmpleado(Integer.parseInt(cookie)));
 		model.addAttribute("sucursales",rest.getSucursals());	
-		model.addAttribute("miembros",rest.getMiembros(1));
+		model.addAttribute("miembros",lista);
 		return "miembros";
 		}
 	}
