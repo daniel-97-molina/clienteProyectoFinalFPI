@@ -1,29 +1,4 @@
 
-
-// $("#btn").click(function(){
-//   $.ajax({
-//      url:'https://gym-danm97.c9users.io/sucursals',
-//      dataType:'json',
-//      type:'GET'
-//
-//   }).done(function (response) {
-//   console.log(response);
-//       });
-//   });
-//
-//var datos={
-//  ubicacion:"San Vicente"
-//};
-//  $("#btn").click(function(){
-//    $.ajax({
-//       type:'post',
-//       url:'https://gym-danm97.c9users.io/sucursals',
-//       data:datos,
-//       dataType:'json'
-//       
-//
-//    });
-//    });
 $(document).ready(function () {
     $("#contact_form").animate({
                                 'opacity':'0'
