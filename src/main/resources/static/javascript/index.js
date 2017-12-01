@@ -51,9 +51,17 @@ $("#contact_form").submit(function(e) {
 		  url: "https://gym-danm97.c9users.io/login",
 		  data: {'codigo':$("#codigo").val(),'contrasena':$("#password").val()},
 		  success: function(r){
-			  console.log(r);
 			  if(r===null){
-				  console.log("no existe");
+				  PNotify.prototype.options.styling = "bootstrap3";
+				  var notice = new PNotify({
+				   title: 'Error',
+				   text: 'Usuario o contraseña incorrectas',
+				   type: 'error'
+				 });
+				 notice.get().click(function() {
+				     notice.remove();
+				 });
+
 			  }else{
 				  createCookie(r.id);
 				  location.reload();
