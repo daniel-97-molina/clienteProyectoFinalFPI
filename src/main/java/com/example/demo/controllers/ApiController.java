@@ -23,15 +23,14 @@ public class ApiController {
 
 	@GetMapping("/")
 	public String get(ModelMap model, @CookieValue(value = "empleado", required = false) String cookie) {
-		// model.addAttribute("lista",rest.getAllEmpleados());
-		//return render(cookie, model, 1);
+	
 		return "redirect:/1";
 	}
 
 	@GetMapping("/{idSucursal}")
 	public String gett(ModelMap model, @CookieValue(value = "empleado", required = false) String cookie,
 			@PathVariable int idSucursal) {
-		// model.addAttribute("lista",rest.getAllEmpleados());
+	
 		return render(cookie, model, idSucursal);
 	}
 
@@ -51,7 +50,6 @@ public class ApiController {
 			model.addAttribute("empleado", rest.getEmpleado(Integer.parseInt(cookie)));
 			model.addAttribute("sucursales", rest.getSucursals());
 			model.addAttribute("miembros", lista);
-			model.addAttribute("idSucursal", "5");
 			return "miembros";
 		}
 	}
